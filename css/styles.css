@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -26,9 +27,9 @@ button {
 
 h1 {
   font-size: 2.6rem;
-  font-family: 'Berkshire Swash', handwriting;
+  font-family: 'Merienda', cursive;
   color: #101010;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h2,
@@ -553,6 +554,7 @@ textarea.input100 {
 
 .offer-box:hover {
   margin-top: -1px;
+  box-shadow: 0px 8px 17px 3px rgba(0, 0, 0, .2);
   transition: all 0.35s ease;
 }
 
@@ -566,9 +568,62 @@ textarea.input100 {
   color: #fff;
 }
 
+/* ********choose us section******* */
+.choose-section {
+  padding: 3rem 0;
+}
+
+.choose-section h1 {
+  margin-bottom: 2rem;
+}
+
+.choose-box {
+  padding: 2rem 1rem;
+  margin: 10px 10px 30px 10px;
+  line-height: 2;
+  height: 100%;
+  border: 1px solid #f4bf00;
+  border-radius: 10px;
+}
+
+.number span {
+  padding: 12px;
+  color: #f4bf00;
+  border: 6px solid #1C335F;
+  border-radius: 100%;
+  font-size: 1.6rem;
+  font-weight: 900;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 40%;
+  top: -15%;
+  height: 90px;
+  width: 90px;
+}
+
+.choose-content h4 {
+  font-size: 1.2rem;
+  color: #1C335F;
+  margin: 1.5rem 0 .3rem 0;
+  font-weight: 600;
+}
+
+.choose-content p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #303030;
+  font-family: 'Jost',
+    sans-serif;
+  line-height: 1.2;
+
+}
+
+
 /* *********about section******** */
 .about-section {
   padding: 3rem 0;
+  background-color: #f7f7f7;
 }
 
 .about-section h1 {
@@ -606,55 +661,103 @@ textarea.input100 {
 }
 
 .about-list i {
-  color: #1C335F;
+  color: #f4bf00;
   font-size: 1.25rem;
+  padding-top: 3px;
 }
 
 .about-list span {
   text-align: left;
   margin-left: 10px;
   font-size: 1.11rem;
-  color: #404040;
+  color: #303030;
   font-weight: 400;
   letter-spacing: .5px;
   margin-bottom: 8px;
+}
+
+.about-list b {
+  /* color: #f4bf00; */
+  color: #1C335F;
 }
 
 .about-box img {
   width: 100%;
 }
 
+/* ********benefit section********* */
+
 .benefit-section {
   padding: 3rem 0;
-  background-color: #f7f7f7;
 }
 
 .benefit-section h1 {
   margin-bottom: 1.5rem;
 }
 
+.benefit-box {
+  padding: 1rem;
+  margin: 5px;
+}
+
 .benefit-box li {
   display: flex;
   flex-direction: row;
-  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .benefit-box i {
   color: #f4bf00;
+  font-size: 1.25rem;
   margin-right: 10px;
+  padding-top: 5px;
 }
 
 .benefit-box span {
   text-align: left;
   font-size: 1.2rem;
-  color: #303030;
+  color: #202020;
   letter-spacing: 1px;
 }
 
-.benefit-box b {
-  color: #1C335F;
+/* *******numbers section****** */
+
+.number-section {
+  padding: 3rem 0;
 }
+
+.number-section h1 {
+  margin-bottom: 60px;
+}
+
+.number-box {
+  padding: 1rem;
+}
+
+.number-box h4 {
+  color: rgba(28, 51, 95, 1);
+  background-color: rgba(132, 144, 255, 0.1);
+  border: 22px solid #f4bf00;
+  border-radius: 100px;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  padding: 60px;
+  font-weight: 400;
+  font-size: 3.4rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
+}
+
+.number-box h3 {
+  color: #202020;
+  font-size: 1.2rem;
+}
+
 
 /* **********media responsiveness********* */
 @media (max-width:769px) {
