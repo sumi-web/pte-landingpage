@@ -591,7 +591,7 @@ textarea.input100 {
   color: #f4bf00;
   border: 6px solid #1C335F;
   border-radius: 100%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
   background-color: #fff;
   display: inline-block;
@@ -603,19 +603,27 @@ textarea.input100 {
 }
 
 .choose-content h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #1C335F;
   margin: 1.5rem 0 .3rem 0;
   font-weight: 600;
 }
 
 .choose-content p {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #303030;
   font-family: 'Jost',
     sans-serif;
   line-height: 1.2;
+}
+
+.choose-content hr {
+  border-style: dotted none none;
+  border-color: #f4bf00;
+  border-width: 8px;
+  max-width: 3rem;
+  margin: .5rem auto;
 
 }
 
@@ -724,39 +732,178 @@ textarea.input100 {
 
 .number-section {
   padding: 3rem 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.number-section .row {
+  position: relative;
 }
 
 .number-section h1 {
-  margin-bottom: 60px;
+  margin-bottom: 1rem;
 }
 
 .number-box {
-  padding: 1rem;
+  padding: 2rem 1rem;
+  height: 100%;
+  position: relative;
 }
 
 .number-box h4 {
   color: rgba(28, 51, 95, 1);
-  background-color: rgba(132, 144, 255, 0.1);
-  border: 22px solid #f4bf00;
+  background-color: #f4f4f2;
+  border: 20px solid #f4bf00;
   border-radius: 100px;
   width: 140px;
   height: 140px;
   margin: 0 auto;
-  padding: 60px;
-  font-weight: 400;
-  font-size: 3.4rem;
+  padding: 65px;
+  font-weight: 600;
+  font-size: 3rem;
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Merienda',
+    cursive;
+  position: relative;
+  z-index: 1;
 }
 
-.number-box h3 {
+.number-box h5 {
   color: #202020;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: .5rem 0;
 }
+
+.number-box h2 {
+  color: #1C335F;
+  font-size: 1.7rem;
+  margin-top: .8rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+}
+
+.number-section hr {
+  border-style: dotted none none;
+  border-color: #1C335F;
+  border-width: 6px;
+  width: 70%;
+  margin: .5rem auto;
+  position: absolute;
+  top: 31%;
+  left: 15%;
+  z-index: 1;
+}
+
+.number-box .divider {
+  width: 1.5rem;
+  margin: -5px auto 0 auto;
+  height: 2px;
+  background-color: #f4bf00;
+}
+
+/* **********faq section********* */
+
+.faq-section {
+  padding: 3rem 0;
+}
+
+.faq-section h1 {
+  margin-bottom: 10px;
+}
+
+.faq-content {
+  padding: 2rem 10rem;
+  text-align: left;
+}
+
+.faq-content h2 {
+  color: #031a3d;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.faq-content h4 {
+  font-size: 1.4rem;
+  color: #1C335F;
+  padding: .5rem .5rem .5rem 0;
+  background-color: #f7f7f7;
+}
+
+.faq-content h5 {
+  font-size: 1.2rem;
+  color: #f4bf00;
+  padding-top: .5rem;
+}
+
+.faq-content li {
+  margin-bottom: .5rem;
+  display: flex;
+  border-radius: 5px;
+}
+
+.faq-content li .ques {
+  color: #fff;
+  background-color: #1C335F;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.faq-content li .ans {
+  color: #fff;
+  background-color: #f4bf00;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  max-width: 50px;
+  max-height: 50px;
+  display: inline-block;
+}
+
+/* ********contact section******** */
+.contact-section {
+  padding: 3% 0;
+  background-color: rgba(156, 223, 143, .1);
+}
+
+.contact-section h1 {
+  margin-bottom: 10px;
+}
+
+.contact-body {
+  padding: 1.5rem;
+}
+
+.contact-body h2 {
+  color: rgba(255, 182, 51, 1);
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.contact-body p {
+  line-height: 1.5;
+  margin: 0;
+  color: #303030;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.contact-body a {
+  color: #221638;
+  font-size: 1.15rem;
+}
+
+.contact-body a:hover {
+  color: rgba(255, 182, 51, 1);
+}
+
 
 
 /* **********media responsiveness********* */
