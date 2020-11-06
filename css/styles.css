@@ -627,7 +627,6 @@ textarea.input100 {
 
 }
 
-
 /* *********about section******** */
 .about-section {
   padding: 3rem 0;
@@ -828,17 +827,33 @@ textarea.input100 {
   margin-bottom: 2rem;
 }
 
-.faq-content h4 {
-  font-size: 1.4rem;
-  color: #1C335F;
-  padding: .5rem .5rem .5rem 0;
-  background-color: #f7f7f7;
+.btn-link {
+  padding: 0;
+  display: flex;
 }
 
-.faq-content h5 {
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.card-body {
+  display: flex;
+}
+
+.accordion h4 {
   font-size: 1.2rem;
+  color: #1C335F;
+  background-color: #f7f7f7;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.accordion h5 {
+  font-size: 1.1rem;
   color: #f4bf00;
-  padding-top: .5rem;
+  display: inline-block;
 }
 
 .faq-content li {
@@ -847,17 +862,15 @@ textarea.input100 {
   border-radius: 5px;
 }
 
-.faq-content li .ques {
+.faq-content .ques {
   color: #fff;
   background-color: #1C335F;
   margin-right: 1rem;
   font-size: 1.5rem;
   border-radius: 5px;
-  width: 50px;
-  height: 50px;
 }
 
-.faq-content li .ans {
+.faq-content .ans {
   color: #fff;
   background-color: #f4bf00;
   font-size: 1.5rem;
@@ -865,6 +878,7 @@ textarea.input100 {
   max-width: 50px;
   max-height: 50px;
   display: inline-block;
+  margin-right: 1rem;
 }
 
 /* ********contact section******** */
