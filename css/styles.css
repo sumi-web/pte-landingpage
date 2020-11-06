@@ -868,22 +868,20 @@ textarea.input100 {
 .faq-content .ques {
   color: #fff;
   background-color: #1C335F;
+  padding: 5px 10px;
   margin-right: 1rem;
   font-size: 1.5rem;
   border-radius: 5px;
-  max-width: 50px;
-  max-height: 50px;
 }
 
 .faq-content .ans {
   color: #fff;
   background-color: #f4bf00;
   font-size: 1.5rem;
+  padding: 5px 10px;
   border-radius: 5px;
-  max-width: 50px;
-  max-height: 50px;
-  display: inline-block;
   margin-right: 1rem;
+  display: inline-block;
 }
 
 /* ********contact section******** */
