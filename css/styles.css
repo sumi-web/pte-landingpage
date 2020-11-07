@@ -78,10 +78,11 @@ a {
   margin: 0 6px;
 }
 
-.nav-item h5 {
-  font-size: 1.25rem;
+.nav-item a {
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  transition: width 1s ease-in;
+  /* transition: width .8s ease-in; */
   display: inline-block;
 }
 
@@ -96,22 +97,24 @@ a {
   bottom: 8px;
   height: 1.2px;
   width: 0;
-  background-color: #111111;
-  transition: width .6s linear;
+  background-color: #1C335F;
+  transition: width .3s ease-in;
 }
 
 .nav-link:hover::after {
   width: 98%;
-  transition: width .5s linear;
+  transition: width .5s ease-out;
 }
 
-.nav-item h5:hover {
-  color: #f4bf00;
-}
-
-.nav-item.active {
+.nav-item a:hover {
   color: #f4bf00 !important;
+  transition: color .2s linear;
 }
+
+/* .active {
+  color: #f4bf00 !important;
+  transition: color .4s linear;
+} */
 
 .fixed-navbar {
   position: fixed;
@@ -122,25 +125,35 @@ a {
   box-shadow: 0 3px 12px -6px black;
 }
 
-.fixed-navbar+.content {
-  padding-top: 60px;
+#topheader .navbar-nav li.active>a {
+  color: #f4bf00;
+}
+
+#topheader .navbar-nav li.active>.nav-link::after {
+  width: 98%;
 }
 
 /**********pte main page section**************/
+
 .main-section {
   position: relative;
-}
-
-.pte-main {
-  position: relative;
-  padding: 4rem 0 5rem 0;
+  padding: 3rem 0 5rem 0;
   background: url(../img/welcome-home-NzKjz8-7Xdw-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.pte-main::before {
+/* .pte-main {
+  position: relative;
+  padding: 4rem 0 5rem 0;
+  background: url(../img/welcome-home-NzKjz8-7Xdw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.main-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -150,9 +163,9 @@ a {
   height: 100%;
 }
 
-.head {
+/* .head {
   padding: 0 5rem;
-}
+} */
 
 .main-head-content {
   text-align: left;
@@ -431,21 +444,6 @@ textarea.input100 {
 }
 
 /*------------------------------------------------------------------
-[ Responsive ]*/
-
-@media (max-width: 768px) {
-  .wrap-contact100 {
-    padding: 72px 50px 25px 50px;
-  }
-}
-
-@media (max-width: 576px) {
-  .wrap-contact100 {
-    padding: 72px 15px 25px 15px;
-  }
-}
-
-/*------------------------------------------------------------------
 [ Alert validate ]*/
 
 .validate-input {
@@ -475,7 +473,7 @@ textarea.input100 {
   border-radius: 20px;
   top: 0px;
   left: 0px;
-  padding: 0 45px 0 22px;
+  padding: 0 40px 0 22px;
   pointer-events: none;
   font-size: 1rem;
   color: #fa4251;
@@ -483,8 +481,8 @@ textarea.input100 {
 }
 
 .btn-hide-validate {
-  font-family: Material-Design-Iconic-Font;
-  font-size: 15px;
+  content: "/f05c";
+  font-family: fontAwesome;
   color: #fa4251;
   cursor: pointer;
   display: -webkit-box;
@@ -497,7 +495,7 @@ textarea.input100 {
   position: absolute;
   height: 50px;
   top: 0px;
-  right: 28px;
+  right: 22px;
 }
 
 .rs1-alert-validate.alert-validate::before {
@@ -505,8 +503,8 @@ textarea.input100 {
 }
 
 .true-validate::after {
-  content: "\f269";
-  font-family: Material-Design-Iconic-Font;
+  content: "\f058";
+  font-family: fontAwesome;
   font-size: 15px;
   color: #57b846;
   display: -webkit-box;
@@ -517,15 +515,15 @@ textarea.input100 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  height: 62px;
+  height: 50px;
   top: 0px;
-  right: 28px;
+  right: 22px;
 }
 
 /*---------------------------------------------*/
 @media (max-width: 576px) {
   .alert-validate::before {
-    padding: 0 30px 0 10px;
+    padding: 0 20px;
   }
 
   .true-validate::after,
@@ -546,10 +544,15 @@ textarea.input100 {
 .offer-box {
   position: relative;
   background-color: #1C335F;
-  padding: 2rem;
+  padding: 2rem 1rem;
   transition: all 0.35s ease;
-  margin: 1rem;
+  margin: 20px;
+  height: 100%;
   box-shadow: 0px 8px 17px 3px rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .offer-box:hover {
@@ -559,8 +562,9 @@ textarea.input100 {
 }
 
 .offer-box i {
-  font-size: 5rem;
-  color: #f4bf00
+  font-size: 3rem;
+  color: #f4bf00;
+  margin-bottom: 10px;
 }
 
 .offer-box h4 {
@@ -574,12 +578,11 @@ textarea.input100 {
 }
 
 .choose-section h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 50px;
 }
 
 .choose-box {
   padding: 2rem 1rem;
-  margin: 10px 10px 30px 10px;
   line-height: 2;
   height: 100%;
   border: 1px solid #f4bf00;
@@ -596,10 +599,11 @@ textarea.input100 {
   background-color: #fff;
   display: inline-block;
   position: absolute;
-  left: 40%;
-  top: -15%;
+  left: 50%;
+  top: 50%;
   height: 90px;
   width: 90px;
+  transform: translate(-50%, -140%);
 }
 
 .choose-content h4 {
@@ -639,7 +643,7 @@ textarea.input100 {
 
 .about-section h4 {
   font-size: 1.2rem;
-  color: #111111;
+  color: #404040;
   margin-bottom: 2rem;
 }
 
@@ -741,55 +745,62 @@ textarea.input100 {
 
 .number-section h1 {
   margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 .number-box {
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   height: 100%;
   position: relative;
 }
 
-.number-box h4 {
-  color: rgba(28, 51, 95, 1);
-  background-color: #f4f4f2;
-  border: 20px solid #f4bf00;
-  border-radius: 100px;
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
-  padding: 65px;
-  font-weight: 600;
-  font-size: 3rem;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
+.number-box img {
+  position: relative;
+  max-width: 100%;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  z-index: 1;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  object-fit: fill;
+}
+
+.number-box .img1 {
+  border: 7px solid rgba(28, 51, 95, 1);
+}
+
+.number-box .img2 {
+  border: 7px solid #f4bf00;
+}
+
+
+.number-box h4 {
+  color: #221638;
+  margin: 5px auto;
+  font-weight: 500;
+  font-size: 2rem;
   font-family: 'Merienda',
     cursive;
-  position: relative;
-  z-index: 1;
 }
 
 .number-box h5 {
-  color: #202020;
-  font-size: 1.25rem;
-  font-weight: 400;
+  color: #303030;
+  font-size: 1.1rem;
+  font-weight: 500;
   margin: .5rem 0;
 }
 
 .number-box h2 {
   color: #1C335F;
   font-size: 1.7rem;
-  margin-top: .8rem;
-  margin-bottom: .5rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
   font-weight: 500;
 }
 
 .number-section hr {
   border-style: dotted none none;
-  border-color: #1C335F;
+  border-color: rgba(0, 0, 0, .125);
   border-width: 6px;
   width: 70%;
   margin: .5rem auto;
@@ -801,19 +812,21 @@ textarea.input100 {
 
 .number-box .divider {
   width: 1.5rem;
-  margin: -5px auto 0 auto;
+  margin: 0 auto;
   height: 2px;
   background-color: #f4bf00;
+  display: block;
 }
 
 /* **********faq section********* */
 
 .faq-section {
   padding: 3rem 0;
+  position: relative;
 }
 
 .faq-section h1 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .faq-content {
@@ -823,13 +836,11 @@ textarea.input100 {
 .faq-content h2 {
   color: #031a3d;
   font-size: 3rem;
-  margin-bottom: 2rem;
 }
 
 .btn-link {
   padding: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -839,54 +850,58 @@ textarea.input100 {
   box-shadow: none;
 }
 
+.card {
+  margin-bottom: 5px;
+}
+
 .card-body {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
 .accordion h4 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #1C335F;
   background-color: #f7f7f7;
-  text-decoration: none !important;
   display: inline-block;
+  font-weight: 500;
 }
 
 .accordion h5 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #f4bf00;
   display: inline-block;
 }
 
-.faq-content li {
-  margin-bottom: .5rem;
-  display: flex;
+.faq-content span {
+  color: #fff;
+  margin-right: 1rem;
+  font-size: 1.5rem;
   border-radius: 5px;
+  padding: 5px 15px;
 }
 
 .faq-content .ques {
-  color: #fff;
   background-color: #1C335F;
-  padding: 5px 10px;
-  margin-right: 1rem;
-  font-size: 1.5rem;
-  border-radius: 5px;
 }
 
 .faq-content .ans {
-  color: #fff;
   background-color: #f4bf00;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-right: 1rem;
-  display: inline-block;
+}
+
+.faq-content hr {
+  max-width: 3rem;
+  height: 2px;
+  background-color: #f4bf00;
+  margin: .5rem 0 1rem 0;
 }
 
 /* ********contact section******** */
 .contact-section {
-  padding: 3% 0;
+  padding: 2rem 0;
   background-color: #f7f7f7;
+  position: relative;
 }
 
 .contact-section h1 {
@@ -899,42 +914,44 @@ textarea.input100 {
 
 .contact-body h2 {
   color: rgba(255, 182, 51, 1);
-  font-size: 1.8rem;
-  margin-bottom: 5px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .contact-body p {
-  line-height: 1.5;
-  margin: 0;
   color: #303030;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
 .contact-body a {
   color: #221638;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  display: inline-block;
 }
 
 .contact-body a:hover {
   color: rgba(255, 182, 51, 1);
 }
 
-
-
 /* **********media responsiveness********* */
 @media (max-width:769px) {
   .main-head-content {
     text-align: left;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
   }
 
   .wrap-contact100 {
     padding: 1.4rem 1.5rem;
   }
 
-  .provide-box-img img {
-    width: 340px;
+  .number-section hr {
+    display: none;
+  }
+
+  .main-form {
+    padding: 1rem 5rem;
   }
 }
 
@@ -948,22 +965,18 @@ textarea.input100 {
     padding: 1.5rem 0;
   }
 
-  .head {
-    padding: 0 1.8rem;
-  }
-
   .navbar-brand img {
     width: 185px;
   }
 
-  .provide-box-img img {
-    width: 320px;
+  .main-form {
+    padding: 1rem 4rem;
   }
 }
 
 @media (max-width: 450px) {
-  .head {
-    padding: 0 1.8rem;
+  .wrap-contact100 {
+    padding: 1.5rem;
   }
 
   .main-head-content {
@@ -975,18 +988,14 @@ textarea.input100 {
     width: 180px;
   }
 
-  .provide-box-img img {
-    width: 300px;
-  }
-
-  .provide-box-img img {
-    width: 300px;
+  .main-form {
+    padding: .5rem 1.5rem;
   }
 }
 
 @media (max-width: 350px) {
-  .head {
-    padding: .4rem;
+  .wrap-contact100 {
+    padding: 1rem;
   }
 
   .main-head-content {
@@ -998,8 +1007,8 @@ textarea.input100 {
     width: 170px;
   }
 
-  .provide-box-img img {
-    width: 280px;
+  .main-form {
+    padding: 0;
   }
 }
 
@@ -1024,13 +1033,11 @@ textarea.input100 {
     padding: .8rem 2.2rem;
   }
 
+  .number-section hr {
+    display: none;
+  }
+
   .main-head-content {
     padding: 3rem 0;
-  }
-}
-
-@media (max-width:768px) and (min-width:600px) {
-  .main-form {
-    padding: .8rem 2rem;
   }
 }

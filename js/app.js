@@ -119,10 +119,11 @@ scrollLinks.forEach(function (link) {
     const fixNavbar = navbar.classList.contains("fixed-navbar");
     let position = element.offsetTop - navbarHeight;
     console.log(position);
+    console.log(navbarHeight)
     if (!fixNavbar) {
-      position = position - navbarHeight;
+      position = position - (navbarHeight);
     }
-    if (navbarHeight > 82) {
+    if (navbarHeight > 90) {
       position = position + linkContainerHeight;
     }
     window.scrollTo({
@@ -134,5 +135,7 @@ scrollLinks.forEach(function (link) {
   })
 });
 
-// rgba(244, 191, 0, 1)
-// rgba(28, 51, 95, 1)
+$('#topheader .navbar-nav a').on('click', function () {
+  $('#topheader .navbar-nav').find('li.active').removeClass('active');
+  $(this).parent('li').addClass('active');
+});
